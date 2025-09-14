@@ -49,4 +49,54 @@ It is scale invariant
 
 
 ### Citation
-Networks: Part 1 – Oxford Mathematics 4th Year Student Lecture | Oxford Mathematics | Insight: 
+Networks: Part 2 – Oxford Mathematics 4th Year Student Lecture | Oxford Mathematics |
+
+## Lecture: Networks: Part 2 - Oxford Mathematics 4th Year Student Lecture  
+**Link:** https://www.youtube.com/watch?v=zF5nVMG-Big
+
+### Key Notes
+1. Networks are a map of nodes connected by links, set of nodes and a set of edges (V,E)
+2. Any edge decsribed as pair of nodes (V,V')
+3. Weight funtion for weighting edges generally positive
+4. N x N adjacency matrix for encoding a network (inefficient for very large networks though)
+
+Aij = {
+  1 if i is adjacent to j
+  0 is otherwise
+}
+Symmetric if undirected
+5. Link list, encodes graph through all edges:
+{(m1,v1),(m2,v2)...(M M, V M)}
+6. Degree of node is number of links = sum of adjacency matrix row i for node i, regular network if all have same degree 
+7. ![equation](https://latex.codecogs.com/svg.latex?\bg_white%20\sum_{i=1}^{N}k_i=\sum_{i=1}^{N}\sum_{j=1}^{N}A_{ij}=2M)
+
+(Sum of degrees is twice number of edges)
+8. Friendship paradox, ur friends will most likely have more friends than you as its not a regular network
+9. A walk is a succession of adjacent nodes, path when each ndoe is visited only once, and shortest walk is a path
+10. Distance is shortest path between two nodes, satisfies triangle inequality, use Dijikstra for finding this
+11. average distance L = ![equation](https://latex.codecogs.com/svg.latex?\bg_white%20L=\frac{2}{N(N-1)}\sum_{i=1}^{N}\sum_{j=1}^{i-1}d(i,j))
+
+
+12. Diameter is farthest distance between two nodes
+13. Weakly conected is for a directed graph underlying undirected graph there is a path between every two vertices, strongly connected, if directed and still directed path exists
+14. Link prediction, simple method for predicted future link is two unconnected nodes connected to mnay open triangles, will probably connect soon
+15. C_i = adbundance of traingles in neighbourhood of i, 
+(number of traingles including node i/(k_i(k_i-1)/2))
+*between 0 and 1*
+
+16. Centrality, simplest method is just using the degree, also closeness centrality where is 1/the average distance, also betweeness centrality, is this nod part of many shortest paths between many nodes in the system
+
+![equation](https://latex.codecogs.com/svg.latex?\bg_white\LARGE\sum_{i=1}^{N}k_i=\sum_{i=1}^{N}\sum_{j=1}^{N}A_{ij}=2M)
+
+Kats Centrality considers all walks not just shortest but weighst towards shorter ones
+17. Can also represent matrix in Laplacian matrix and Normalised Laplacian matrix
+
+Laplacian = Degree matrix (degrees on diagonal) - A
+Normalised Laplacian = Identity - D^-1/2 A D^-1/2
+
+All eigen valiues are postituve of 0
+ for Adjacency λ_1 > λ_2 > λ_u
+ Reverse for laplacian
+
+### Citation
+Networks: Part 2 – Oxford Mathematics 4th Year Student Lecture | Oxford Mathematics |
