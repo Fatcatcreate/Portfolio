@@ -100,3 +100,29 @@ All eigen valiues are postituve of 0
 
 ### Citation
 Networks: Part 2 – Oxford Mathematics 4th Year Student Lecture | Oxford Mathematics |
+
+## Lecture: Networks: Part 3 - Oxford Mathematics 4th Year Student Lecture  
+**Link:** https://www.youtube.com/watch?v=cq-rAUwQoaM&
+
+### Key Notes
+1. Erdos Reyni Model (ER), 1959, random model of a graph g(N,q) (q is porbbaly that a pair of nodes is connected), eg binary process for each set of nodes whether you generate or not
+2. Probability of M edges is a binomial based of probability q
+3. Average distance is around log N/log k (average degree)
+4. Clusering coefficient eg how much nodes cluster is k/ N-1 (eg for large n and small k its very low as they arnt connecting alot)
+5. AS average degree increases size of giant compoinbts increases logarithmically looking? at perpolation transition it shifts from liens to giant balls and trees
+6. define u as probability that node is not part of giant component, eg if no giant component u = 1 else smaller:
+if i does not belong to giant compoent cannot be adjacent to j if j is connected to GC as otherwise it would be aprt of it, by follwoing through we create a realtion forming u in terms of q, taking limit, 
+perpolation is that s that node belongs to GCC is 
+$ s = 1 - e^{- \langle k \rangle S} $
+7. ER degree distribution is binomial, which is unrealistic so one way to generalise is configuration model
+8. Configuration model you fix degrees of nodes and therefore fix degree distribtion 
+9. Question arises then for node i degree k_i and node j degree k_j what is expected number of links between them whioch becoimes 
+
+$ {k_i}*{k_j}/2M $
+
+10. Motif analysis uses random sampling vs empirical dataset to find which motifs are imprtant 
+11. Babasi and Albert for growing networks, new nodes connect proportionally to the degree of the nodes currently in the networks, eg more likely to be friends with someone withba lot of friends, also follows power law distributions
+
+
+### Citation
+Networks: Part 3 – Oxford Mathematics 4th Year Student Lecture | Oxford Mathematics |
