@@ -70,11 +70,14 @@ Symmetric if undirected
 6. Degree of node is number of links = sum of adjacency matrix row i for node i, regular network if all have same degree 
 7. <img src="https://latex.codecogs.com/svg.latex?\color{White}\sum_{i=1}^{N}k_i=\sum_{i=1}^{N}\sum_{j=1}^{N}A_{ij}=2M" />
 
+
 (Sum of degrees is twice number of edges)
 8. Friendship paradox, ur friends will most likely have more friends than you as its not a regular network
 9. A walk is a succession of adjacent nodes, path when each ndoe is visited only once, and shortest walk is a path
 10. Distance is shortest path between two nodes, satisfies triangle inequality, use Dijikstra for finding this
 11. average distance L = <img src="https://latex.codecogs.com/svg.latex?\color{White}L=\frac{2}{N(N-1)}\sum_{i=1}^{N}\sum_{j=1}^{i-1}d(i,j)" />
+
+
 
 12. Diameter is farthest distance between two nodes
 13. Weakly conected is for a directed graph underlying undirected graph there is a path between every two vertices, strongly connected, if directed and still directed path exists
@@ -86,6 +89,7 @@ Symmetric if undirected
 16. Centrality, simplest method is just using the degree, also closeness centrality where is 1/the average distance, also betweeness centrality, is this nod part of many shortest paths between many nodes in the system
 
 <img src="https://latex.codecogs.com/svg.latex?\color{White}\sum_{i=1}^{N}k_i=\sum_{i=1}^{N}\sum_{j=1}^{N}A_{ij}=2M" />
+
 
 Kats Centrality considers all walks not just shortest but weighst towards shorter ones
 17. Can also represent matrix in Laplacian matrix and Normalised Laplacian matrix
@@ -112,12 +116,14 @@ Networks: Part 2 – Oxford Mathematics 4th Year Student Lecture | Oxford Mathem
 6. define u as probability that node is not part of giant component, eg if no giant component u = 1 else smaller:
 if i does not belong to giant compoent cannot be adjacent to j if j is connected to GC as otherwise it would be aprt of it, by follwoing through we create a realtion forming u in terms of q, taking limit, 
 perpolation is that s that node belongs to GCC is 
-$ s = 1 - e^{- \langle k \rangle S} $
+<img src="https://latex.codecogs.com/svg.latex?\color{White}s=1-e^{-\langle k\rangle S}" />
+
 7. ER degree distribution is binomial, which is unrealistic so one way to generalise is configuration model
 8. Configuration model you fix degrees of nodes and therefore fix degree distribtion 
 9. Question arises then for node i degree k_i and node j degree k_j what is expected number of links between them whioch becoimes 
 
-$ {k_i}*{k_j}/2M $
+<img src="https://latex.codecogs.com/svg.latex?\color{White}\frac{k_i\,k_j}{2M}" />
+
 
 10. Motif analysis uses random sampling vs empirical dataset to find which motifs are imprtant 
 11. Babasi and Albert for growing networks, new nodes connect proportionally to the degree of the nodes currently in the networks, eg more likely to be friends with someone withba lot of friends, also follows power law distributions
@@ -129,7 +135,33 @@ Networks: Part 3 – Oxford Mathematics 4th Year Student Lecture | Oxford Mathem
 **Link:** https://www.youtube.com/watch?v=W_A6NbqpTW8
 
 ### Key Notes
-...
+1. Community detection, so many graphs eg papers or social networks have dense parts thta are weakly connected with other dense paths
+2. This can be hierarchical, connected to ER moidels before, this is extended to Stochastic Block Models (SBM) this defines communtiies, not nodes and then have probabilty that a node of community i is connected to a node of community j in a matrix, after assignin nodes to communties
+3. Community detection by using a coarser resuolution so tis easier to see communities
+4. Graph partitioning where one specifies number and size of groups and tried ot minimise connections between groups
+5. Community Detection number of size of groups determined by network and trying to find natural clusters, can sometimes not divide networks
+6. Example: partision network into two groups by minimising the cut, eg number of edges cut in half, random chocie grows exponentially so cannot work
+7. Use spectral methods eg assigning nodes a spin -1 or 1, you can therefore write the groups in the laplacian of the graph (Laplacian is all eigen values can be written λ_1 < λ_2 < λ_u all greater than 0)
+8. Approximation: If one wants a split into n1 and n2 = n − n1 vertices, one orders the components of the Fiedler vector from the largest positive to the smallest negative and picks the n1 largest (smallest) components of the Fiedler vector
+9. Newman Girvan Modularity very common, defined as fraction of edges within communities comparing against expected fraction of such edges in an appropriate model, maximising links within communities
+10. Modularity, lest say you have a parition with a communtiy that ahs two bits dicsonnected then it is always better to split this group into those two bits
+11. Optimisation of modularity is NP complete, and modularity matrix can be negative or positive, then if s_i is the dominant eigenvector s_i = 1 if u_N,i > 0 and the opposite for negative 1, we iterate trying to find optimal partition then repeating again and again however this is slow
+12. Greedy can be faster e.g Louvain method (GUY GIVING LECTURE WAS AUTHOR R.Lambiotte)  
+13. 
+
+The algorithm is based on two steps that are repeated iteratively. First phase: Find a local maximum
+
+Give an order to the nodes (0, 1, 2, 3, …, N–1)
+Initially, each node belongs to its own community (N nodes and N communities)
+
+One looks through all the nodes (from 0 to N–1) in an ordered way. The selected node looks among its neighbours and adopts the community of the neighbour for which the increase of modularity is maximum (and positive).
+
+This step is performed iteratively until a local maximum of modularity is reached (each node may be considered several times)
+
+14. Then you do another phase where u make the nodes the communities that were previously made, with weights summed from the node weights, then you repeat these two phases until no better 
+15. Test by seeing whether partitions creates by you match the oens predicated by model, and then graoh conformity
+16. Limits of modularity, many partition combinations can have the same level of modularity (landscape very rugged)
+17. when graph is too large may merge fine structires of communities, therefore dont use to compare different graphs
 20. Modularity definition:
 
 Modularity measures the strength of division of a network into communities.  
@@ -141,11 +173,13 @@ The formula for modularity is
 
 <img src="https://latex.codecogs.com/svg.latex?\color{White}Q=\frac{1}{2m}\sum_{i=1}^{N}\sum_{j=1}^{N}\Big(A_{ij}-\frac{k_i\,k_j}{2m}\Big)\,\delta(c_i,c_j)" />
 
+
 ---
 
 Adjacency matrix
 
 <img src="https://latex.codecogs.com/svg.latex?\color{White}A_{ij}" />
+
 
 A_{ij} =
 1 if there is an edge between nodes i and j
@@ -155,11 +189,13 @@ Node degree
 
 <img src="https://latex.codecogs.com/svg.latex?\color{White}k_i=\sum_{j=1}^{N}A_{ij}" />
 
+
 This is the number of edges connected to node i.
 
 Total number of edges
 
-<img src="https://latex.codecogs.com/svg.latex?\color{White}m=\frac{1}{2}\sum_{i=1}^{N}k_i" />
+<img src="https://latex.codecogs.com/svg.latex?\color{White}m=\tfrac{1}{2}\sum_{i=1}^{N}k_i" />
+
 
 This counts each edge once (since the sum of degrees counts each edge twice).
 
@@ -167,11 +203,13 @@ Expected edges in random network
 
 <img src="https://latex.codecogs.com/svg.latex?\color{White}\frac{k_i\,k_j}{2m}" />
 
+
 This is the expected number of edges between nodes i and j in a random network with the same degree distribution.
 
 Community indicator
 
 <img src="https://latex.codecogs.com/svg.latex?\color{White}\delta(c_i,c_j)" />
+
 
 δ(c_i, c_j) =
 1 if nodes i and j are in the same community
@@ -186,5 +224,18 @@ Q > 0.3 : Presence of community structure.
 Q ≈ 0.7 : Strong community structure (rare to go much higher).  
 
 
+
+
 ### Citation
 Networks: Part 4 – Oxford Mathematics 4th Year Student Lecture | Oxford Mathematics |
+
+
+
+## Lecture: Networks: Part 5 - Oxford Mathematics 4th Year Student Lecture  
+**Link:** https://www.youtube.com/watch?v=aS6R3epK3ms
+
+### Key Notes
+1.
+
+### Citation
+Networks: Part 5 – Oxford Mathematics 4th Year Student Lecture | Oxford Mathematics |
