@@ -235,7 +235,29 @@ Networks: Part 4 – Oxford Mathematics 4th Year Student Lecture | Oxford Mathem
 **Link:** https://www.youtube.com/watch?v=aS6R3epK3ms
 
 ### Key Notes
-1.
+1. Laplacian is Degree matrix minus Adjancency (refer to previous notes)
+2. A = A^T (Transpose)
+3. diag(X) is Matrix X such that X_ii is equal top x_i and 0 otherwise
+4. Consensus Dyanmics:
+Each node starting with a state 
+X = -LX
+X_i = sum j (A_ij* X_j - δ_ij * x_i)
+global consensus is that
+x_i converges to x_*
+eg reaches the average of all the initial states 
+5. Another methos is for a markov chain random walk for diffusion of information, at equilibrium probability to find walker on a node is propertional to degree of that node 
+6. time scale seperate eg dy/dt * ε with ε <<1 = f(x,y) and  dx/dt = f(x,y) theerfore time seperation as y chnages sklowere with time, this decouples the system into two regimes 
+7. U can neglect many terms as you can seperate the time scale and assume all other regimes have recahed asymptitic behaviour before evaluating
+8. If communities with weak connections subspace is close to the eigenspace that encode the communities 
+9. Structural equivalence:
+2 nodes equivalnec if have same neighbours
+10 EEP (Externally Equivalent Partitions ) Partition of netork into Cells C_j such that for any node in C_i is isn connected to a fixed number of nodes in other partitons/group
+
+10. If C is a matrix just saying which nodes are in which partitions it is EEP is Laplacian C = C L^π
+L^π being k x k laplacian of quotient graph, k being number of cells
+11. By focusing on analysing cells but not nodes using the symmetry it can be a very useful trick
+12. With modules you are interested in the timescale seperataion, but with EEPs instead of the eingen valeus you are more concerned with the eigenvectors
+
 
 ### Citation
 Networks: Part 5 – Oxford Mathematics 4th Year Student Lecture | Oxford Mathematics |
