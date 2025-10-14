@@ -241,7 +241,8 @@ Networks: Part 4 – Oxford Mathematics 4th Year Student Lecture | Oxford Mathem
 4. Consensus Dyanmics:
 Each node starting with a state
 X = -LX
-X_i = sum j (A_ij*X_j - δ_ij* x_i)
+<img src="https://latex.codecogs.com/svg.latex?X_i%20=%20\sum_j%20(A_{ij}X_j%20-%20\delta(c_i,c_j)X_i)" />
+
 global consensus is that
 x_i converges to x_*
 eg reaches the average of all the initial states
@@ -281,3 +282,75 @@ Networks: Part 5 – Oxford Mathematics 4th Year Student Lecture | Oxford Mathem
 ### Citation
 
 How Does Mathematics Last? Heritage and Heritage-making in Mathematics - Caroline Ehrhardt |
+
+
+## Lecture: Networks: Part 6 - Oxford Mathematics 4th Year Student Lecture  
+
+**Link:** <https://www.youtube.com/watch?v=cctHyGe5D_k>
+
+### Key Notes
+
+1. randok walker on a nod, proabbitlties that ti goes to another node joiend tio it, sum to 1
+2. Same as a markov chain
+3. porpbailtity is T_i_j= A_i_j/k_i eg adjancency over degree
+4. In diercted network, is an absoirbign state if no outgoing links, also ergodic set, ehre eu cant leave tyhat set of nodes adn Transient nodes which is a node not part of an ergodic set
+5. the trasnoition matrix 
+<img src="https://latex.codecogs.com/svg.latex?\color{White}T_{ij}%20=%20\frac{A_{ij}}{R_i}" />
+<img src="https://latex.codecogs.com/svg.latex?\color{White}\tilde{A}_{ij}%20=%20\frac{A_{ij}}{\sqrt{R_i%20R_j}}" />
+<img src="https://latex.codecogs.com/svg.latex?\color{White}\tilde{A}_{ij}%20=%20\sum_{e=1}^{N}%20\lambda_e%20\bar{u}_e%20\bar{u}_e^T" />
+<img src="https://latex.codecogs.com/svg.latex?\color{White}\langle%20\bar{u}_e,%20\bar{u}_{e'}%20\rangle%20=%20\delta_{ee'}" />
+<img src="https://latex.codecogs.com/svg.latex?\color{White}T_{ij}%20=%20\frac{\sqrt{R_j}%20\tilde{A}_{ij}}{\sqrt{R_i}}" />
+<img src="https://latex.codecogs.com/svg.latex?\color{White}T%20=%20D^{-1/2}%20\tilde{A}%20D^{1/2}" />
+<img src="https://latex.codecogs.com/svg.latex?\color{White}\text{The%20same%20eigenvalues}%20\Rightarrow%20\text{real}" />
+<img src="https://latex.codecogs.com/svg.latex?\color{White}\mathbf{u}_e^L%20=%20((u_e)_1\sqrt{R_1},%20\dots,%20(u_e)_N\sqrt{R_N})" />
+<img src="https://latex.codecogs.com/svg.latex?\color{White}\mathbf{u}_e^R%20=%20((u_e)_1/%20\sqrt{R_1},%20\dots,%20(u_e)_N/%20\sqrt{R_N})" />
+
+6. Probabiltiyt to be b on a node at a certain time , is the sum of whast going on on all egein direction 
+is 
+<img src="https://latex.codecogs.com/svg.latex?\color{White}P_i(t)=\sum_{\ell=1}^{N}a_{\ell}(t)\,(\mathbf{u}_{\ell}^R)_i\sqrt{R_i}" />
+<img src="https://latex.codecogs.com/svg.latex?\color{White}a_{\ell}(t)=\lambda_{\ell}^{t}a_{\ell}(0)" />
+
+all eigen values between [-1,1]
+=1 when connected and -1 when bipartite
+
+as 
+t-> <img src="https://latex.codecogs.com/svg.latex?\color{White}\infty" />
+
+becomes the left eigenvecxtor of the trasnition matrix 
+
+7.as t gets large 
+<img src="https://latex.codecogs.com/svg.latex?\color{White}|\lambda_{\ell}|^{t}\ll|\lambda_{2}|^{t}" />
+
+8.when 1-λ_2 is small then slow relaxation when large then converges very fast
+
+9. conductance for a graph is the min of (number of edges that conenct the group of nodes S to the remining group/ min of the volume of S very S complement )
+e.g eimagine circle around haf the graph and two links to the rest 
+
+10. populaation entwrok ecah with some value Y reprenstaing some stat, eg age
+
+Use *Respondent driven sampling (RDS)*, you choose one perosn, and get them to refer their friends and they try to get their friends for the survery, giving youn a sequnce of the y sampled from the set of y.    
+
+
+Each person refers one friend and you can resample people, sampling done by a discrete time random walk, this is biased as this samples the high degree nodes more, so we must counterbalance 
+ 
+11. We counterbalance in *RDS 2* we can give less importance to high degree nodes to try to counterbalance 
+
+12. However if cannot backtrack then can use non backtracking random walk  
+
+13. Continuous time random walks,  in Node cenrtic continuosu time random walks, time intervals distributed by an expoenntial, when more neihbours lower rate, 
+
+d/dt P(t) = P(t) (-I +T)
+
+so P_i = k_i/2m
+
+P_i being stationary distribution 
+
+In edge centric conitnous random walk, if node has mroe edges moves more quickly, so number or edges propertional to rate  of walk 
+
+d/dt P(t) = P(t) (-D+A)
+
+P_i = 1/N 
+
+### Citation
+
+Networks: Part 6 – Oxford Mathematics 4th Year Student Lecture | Oxford Mathematics |
