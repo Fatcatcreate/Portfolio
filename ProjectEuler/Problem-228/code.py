@@ -8,8 +8,7 @@ def count_dirs(a, b):
             s.add(Fraction(2*k, n))
     return len(s)
 
-def main():
-    print(count_dirs(1864, 1909))
 
-if __name__ == "__main__":
-    main()
+print(count_dirs(1864, 1909))
+
+
