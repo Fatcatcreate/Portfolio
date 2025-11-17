@@ -354,3 +354,22 @@ P_i = 1/N
 ### Citation
 
 Networks: Part 6 – Oxford Mathematics 4th Year Student Lecture | Oxford Mathematics |
+
+## Lecture: Going for Gold: the Mathematics of Sporting Glory - Amandine Aftalion
+
+**Link:** <https://www.youtube.com/watch?v=UeGXwvXqUNA>
+
+### Key Notes
+
+1. Centripetal is mv^2/r
+2. Effort is mental, eg depending if your brain works more or less gives you more or less enegry for other processes
+3. a single extra metre of radius can make or break a record
+4. For a bike COM above area and when falling mv^2/r
+5. For basketball as the COM changes as they raise arms as the COM follows a parabola they stay in air for longer
+6. Better to have someon in front for biking as vortices replaced by person
+7. Swimming slightly under water is least water resistance as less pressure drag
+8. When Paris olympics had lower pool depth the waves woud; relfect faster agaisnt them slowing them down comapred to 3m
+
+### Citation
+
+Going for Gold: the Mathematics of Sporting Glory - Amandine Aftalion | Oxford Mathematics |
