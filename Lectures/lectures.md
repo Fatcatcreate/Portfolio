@@ -373,3 +373,16 @@ Networks: Part 6 – Oxford Mathematics 4th Year Student Lecture | Oxford Mathem
 ### Citation
 
 Going for Gold: the Mathematics of Sporting Glory - Amandine Aftalion | Oxford Mathematics |
+
+
+## Lecture: Networks: Part 7 - Oxford Mathematics 4th Year Student Lecture  
+
+**Link:** <https://www.youtube.com/watch?v=---gzhcMEHA>
+
+### Key Notes
+
+1.
+
+### Citation
+
+Networks: Part 7 – Oxford Mathematics 4th Year Student Lecture | Oxford Mathematics |
