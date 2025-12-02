@@ -381,7 +381,20 @@ Going for Gold: the Mathematics of Sporting Glory - Amandine Aftalion | Oxford M
 
 ### Key Notes
 
-1.
+1. Retuirn to Newmann Girvan Modularity lecture 4, without forum,la here but more generally epxected links between i and j from their degree minus adjacence. Qualitity of a partition, is based on actual edges vs expected edges between 2 nodes based on a null graph, eg random edges but preservong node degrees * the delta eg 1 if in same community 0 if not. This can be optimised.
+2. We could have multi level modualrities eg sum communtiies, and optimising a modularity will only optimsie for one level of community.
+we can add a parmater gamma * the expected, large gamma is high reoslition so more like single nodes small gama is oppisite.
+This is Riechtardt and Bornholdt.
+3. Another way is setting a random walker on the network and hell prpobably spend mroe time in comuntiies befroe leaving
+4. Dynamcis to find communtiies. We use coding theory. We label nodes with binary numbers, and try reduce numebrings. 
+5. we write down an ordered list of nodes visited, but we wirte themn in binary such that ecah si not a prefix of another and we concatnate these.
+We use huffman code to label the nodes, shorter onees given to more often visited nodes and longer ones for less visited nodes.  
+6. When wlaker neters community, we yuse a code word to reprsent entry, rhen we contacentae the sequnce of visited nodes and then we reprsent he exuit of the sommuntiy withba code word, eg each community gets its own dictioinary of huffman codes, when ti exists iut enters other communitya dn we preat this process.
+7. We have quality fucntion of the theroretical limit of how considlry we can specify a wlak ins aid way with a given aprtition. Thsi is the map equation. 
+8. Partition defined as betetr if wlakers dtays long time in each patition befroe switching, eg ones nextc to each toher same parittion so doesnt switch quickly, this can be measured with Markov Stability, of probabiltity of wlaker to be at same comunity at time $$t_0$$ and time $$t_0+t$$ when system is in equilibrium - probabloity for two ranomw alkers to be in c or porobaboltity of wlaker to be in the same community at $$t_0$$ and at infinity.
+9. In weighted directed networks moduelairty will oput strong wieghts togetehr comapred to Markov will priortise flows base cycles.
+10. Tiome can be a rsuoltion aprmaters for poission witing times, at t = 0 we get 1- sum of (average degree of comunntiy)^2/2m with sommuntiies as singlw nodes
+11. Stabiltoty at time t is miodualirty of a time dependent grapoh of adjacency matric X(t) = is the pflow of proabbiltoty that goes from node j to i intime t
 
 ### Citation
 
