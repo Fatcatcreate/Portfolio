@@ -486,7 +486,15 @@ $$
 
  if avarega of k tilde suare is much larger than square of average  k tilde menaingtopoogy of grpah plays massive role menaing it hs a broad distribution, it implies that disease will spread quickly 
 
-9. Contact networks, we assume nodes are people not places and edges are contacts, hard to measure adn edges are not static irl, but we assume they are. each ndoe in state $$x_i$$ which is 1 if infected 0 if susceptible.
+9. Contact networks, we assume nodes are people not places and edges are contacts, hard to measure adn edges are not static irl, but we assume they are. each ndoe in state $$x_i$$ which is 1 if infected 0 if susceptible. we see how $$<x_i(t)>$$ chnages over time.
+
+$$
+\frac{d x_I}{dt}
+$$ 
+= β * sum of adjacency for i and j times probabiltity i is sucseptible and j is infected.
+
+10. Use hypergraph to represent non binary interactions
+
 ### Citation
 
 Networks: Part 8 – Oxford Mathematics 4th Year Student Lecture | Oxford Mathematics |
