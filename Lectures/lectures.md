@@ -399,3 +399,94 @@ We use huffman code to label the nodes, shorter onees given to more often visite
 ### Citation
 
 Networks: Part 7 – Oxford Mathematics 4th Year Student Lecture | Oxford Mathematics |
+
+## Lecture: Networks: Part 8 - Oxford Mathematics 4th Year Student Lecture  
+
+**Link:** <https://www.youtube.com/watch?v=67xLOcA5Qbs>
+
+### Key Notes
+
+1. COntact networks and contact tracing, we trace contacts before they can infect. 
+2. networks may be better than spatial modellign for seeing how diseases spread
+3. Comparmental mdoels have imnteracting agents with different states corresponding to whther they are susceptible, infected and recovered for example. Mean field assumes random interactions between any pair of agents. $$S(t)$$ is portion that are sucsveotible and $$I(t)$$ is proprtion infected. chnage in $$S(t)$$ over time is proprtions to rovery rate μ and a β rate which detrmines how suceptiple people become infected
+4. $$I^*$$ is $$1-μ/β$$ if the ratio is less thna one hjwoever it euals 0 when greater than one, eg whther mnor epeople recover than get infected or more get infected that recover.
+5. SIR has recovered people which cannot be reinfected, but s otherwise simialr, this leads to s astate with no infected people only recoevered or suceptible.
+6. IF $$S(t)$$ near one then rtae of chnage of $$I(t)$$ is $$β*S(t)I(t)$$ therefore $$I(t) \propto e^{βt}$$
+7. Network with number of people going from one to another node is a wieghjted edge, eg nodes represent places. Therefore you do mean field over a lcoal area 
+8. Metapopautoon networkm, agents random walk. This has been shown above. For interactions for SIS. 
+
+
+Rules for the interactions:
+
+$$
+N_{S,i}, \quad N_{I,i}
+$$
+
+The differential equations are given by:
+
+$$
+\frac{d N_{S,i}}{dt} = -\beta N_{S,i} N_{I,i} + \mu N_{I,i} - D_S \sum_{j} N_{S,j} \tilde{L}_{ij}
+$$
+
+$$
+\frac{d N_{I,i}}{dt} = \beta N_{S,i} N_{I,i} - \mu N_{I,i} - D_I \sum_{j} N_{I,j} \tilde{L}_{ij}
+$$
+
+As \( N_S \to N_{I,i} \), we have:
+
+$$
+N_S^* = \frac{r_i}{\langle k \rangle} \tilde{N}
+$$
+
+Therefore,
+
+$$
+\frac{\partial N_{I,i}}{\partial t} = \frac{\beta N}{\langle R \rangle} \tilde{r}_i N_{I,i} - \mu N_{I,i} - D_I \sum_{j} N_{I,j} \tilde{L}_{ij}
+$$
+
+# SIS Model - Additional Equations
+
+For all \(i \in \{1, \dots\}, \tilde{N}\) is a solution:
+
+$$
+\frac{d \tilde{N}}{dt} \approx B \tilde{N}_B
+$$
+
+The relationship for \( B_{ij} \):
+
+$$
+B_{ij} = S_{ij} \left( \frac{\beta N}{\langle 2k \rangle} \tilde{N}_i - \mu \right) - D_i \tilde{L}_{ij}
+$$
+
+When \( D_I \to \infty \), we have:
+
+$$
+N_{I,i} = \frac{\tilde{R}_i N_I}{\langle \tilde{L} \rangle} \tilde{N}
+$$
+
+Thus, the total \( N_I \) is:
+
+$$
+N_I = \sum_{i \in S} N_{I,i}
+$$
+
+The equation for the time evolution of \( N_I \) is:
+
+$$
+\frac{d N_I}{dt} = \left( \frac{\beta N \langle \tilde{R}^2 \rangle}{\langle \tilde{L} \rangle^2} - \mu \right) N_I
+$$
+
+Finally, the condition for the system is:
+
+$$
+\frac{\beta}{\mu} > \frac{\langle \tilde{R} \rangle}{\langle \tilde{L} \rangle^2} \frac{\tilde{N}}{N}
+$$
+
+
+
+ if avarega of k tilde suare is much larger than square of average  k tilde menaingtopoogy of grpah plays massive role menaing it hs a broad distribution, it implies that disease will spread quickly 
+
+9. Contact networks, we assume nodes are people not places and edges are contacts, hard to measure adn edges are not static irl, but we assume they are. each ndoe in state $$x_i$$ which is 1 if infected 0 if susceptible.
+### Citation
+
+Networks: Part 8 – Oxford Mathematics 4th Year Student Lecture | Oxford Mathematics |
