@@ -498,3 +498,69 @@ $$
 ### Citation
 
 Networks: Part 8 – Oxford Mathematics 4th Year Student Lecture | Oxford Mathematics |
+
+## Lecture: Information Theory, Lecture 1: Defining Entropy and Information - Oxford Mathematics 3rd Yr Lecture
+
+**Link:** <https://www.youtube.com/watch?v=ScX2aBFyrVU>
+
+### Key Notes
+1. Distribution/law of random variable is described by its probability mass function
+2. P_x is probability x in some subset (a,b)
+3. cumulative disytribution fucntion is $$F_x (y)= P(x<y)$$ 
+4. Suprise is defined with axioms
+
+s(a) depends contuniously on probability of A
+s(A) is decreasing as probabiltuty increases 
+S(A∩B) is S(A)+S(B) is A and B are indepndent
+
+from this we cna conclude S(A) is -log(P(A))
+
+5. Entropy H (alwasy base 2 using bits)
+is sum of s suprises for all elemnts possible eg all cards in deck * probabiluty
+
+e.g Sum -P(x)*log(P(x))
+
+6. For two outcomes one probabiltty p and one proability 1-p
+
+we get -plogp -(1-p)log(1-p)
+this is H(p)
+7. If events are indepdnent then H(x y) is H(x)+H(y) and if identically distributed then H(x y) is 2H(x)
+8. is p and q be probability amss fucntions of X
+then Divergence of p and q
+
+is D(p|q) = Σ p(x)log(p(x)/q(x))
+
+if q is 0 and other isnt then divergence is infinite
+
+9. D(p|q) is E[log P(X)/q(X)] = E[log q(X)]-H(X) with E[] being expected value
+
+10. X = {0,1} p(0)=1/2 q(0)=1
+how to distinguish betwen the two?
+If we toss once and we observe a 1 we know its p if we ever observe 1 its p
+
+hwoever if many 0s eg 00000 then probably q 
+
+this is as D(p|q) is ifninity but D(q|p) = 1
+11. Let X,Y be random variables in x y
+Mutual information betwen X and Y
+
+$$I(X;Y) = \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} 
+P(X=x, Y=y)\,\log\!\left(\frac{P(X=x, Y=y)}{P(X=x)\,P(Y=y)}\right)$$
+
+If independent then one does not tell you about other then the log = 0 as intersection is just multiplying probabilities
+
+I(X;Y) = D(P_xy|P_xP_y) e.g how far joint distribution is far from random distribution eg taking ecah seperately or together
+
+it is also equal to H(X)+H(Y)-H(X,Y)
+
+12. The conditional entropy of Y given X is 
+
+$$H(Y \mid X) = - \sum_{x} \sum_{y} P(X=x, Y=y)\,\log\!\bigl(P(Y=y \mid X=x)\bigr)$$
+
+This is how much randomness in Y after observing X eg if not independent then useful
+
+also H(X|Y)= H(X,Y)-H(Y)
+
+### Citation
+
+Information Theory, Lecture 1: Defining Entropy and Information - Oxford Mathematics 3rd Yr Lecture
