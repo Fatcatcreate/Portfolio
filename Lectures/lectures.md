@@ -444,7 +444,7 @@ $$
 \frac{\partial N_{I,i}}{\partial t} = \frac{\beta N}{\langle R \rangle} \tilde{r}_i N_{I,i} - \mu N_{I,i} - D_I \sum_{j} N_{I,j} \tilde{L}_{ij}
 $$
 
-# SIS Model - Additional Equations
+## SIS Model - Additional Equations
 
 For all \(i \in \{1, \dots\}, \tilde{N}\) is a solution:
 
@@ -499,7 +499,7 @@ $$
 
 Networks: Part 8 – Oxford Mathematics 4th Year Student Lecture | Oxford Mathematics |
 
-## Lecture: Information Theory, Lecture 1: Defining Entropy and Information - Oxford Mathematics 3rd Yr Lecture
+## Lecture: Information Theory, Lecture 1: Oxford Mathematics 3rd Yr Lecture
 
 **Link:** <https://www.youtube.com/watch?v=ScX2aBFyrVU>
 
@@ -563,4 +563,49 @@ also H(X|Y)= H(X,Y)-H(Y)
 
 ### Citation
 
-Information Theory, Lecture 1: Defining Entropy and Information - Oxford Mathematics 3rd Yr Lecture
+Information Theory, Lecture 1: Oxford Mathematics 3rd Yr Lecture
+
+
+## Lecture: Information Theory, Lecture 2: Oxford Mathematics 3rd Yr Lecture
+
+**Link:** <https://www.youtube.com/watch?v=dnEG3vYoMow>
+
+### Key Notes
+1. Information is sum of entropies minus entropy of pair, eg what info do i get about X knowing Y
+2. Conditional divergence exists its divergences of two distributions conditional on X, with diveregnce p|q being the info lost if i use q instead of p for the same variable
+3. Conditional Information:
+Let x y z be discrete random variables in some spacxe X
+Conditional Mutual Information between x and y Given Z (given being |)
+I(x;y | z) = H(x|z) - H(x| y,z)
+4. Jensens Inequality:
+Take a random variable x and a convex fucntion φ then
+E[φ(x)] > φ(E[x]) proof by picture thing e^x, then a straight line tangent, K this line always lies below the curve for all points 
+5. Gibbs inequality:
+Let p,q be pmfs on some set X 
+$$-\sum_{x \in \mathcal{X}} p(x)\,\log p(x)
+\;\le\;
+-\sum p(x)\,\log q(x).$$
+
+equal if p=q
+6. Information propery 
+
+I(x;y)>0 unless independent in which case 0
+
+I(x;y)= I(y;x)= H(x)-H(x|y)
+
+I(x_1,x_2....x_n;y) = Σ I(x_i;y| x_i-1...x_1)
+
+If I(X and Z are independent conditional on Y) I(x;Y)> I(Z;Z)
+
+(gain no more infomation frokm x looking at y)
+
+let f:y->z then I(x,y) > I(x;f(y))
+
+Entropy proprties 
+x, y discrete Rvs in X
+1. H(x) greater than 0 and less than log (x)
+2. H(x|y) < H(x)
+
+### Citation
+
+Information Theory, Lecture 2: Oxford Mathematics 3rd Yr Lecture
