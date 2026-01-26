@@ -609,3 +609,117 @@ x, y discrete Rvs in X
 ### Citation
 
 Information Theory, Lecture 2: Oxford Mathematics 3rd Yr Lecture
+
+
+## Lecture: Information Theory, Lecture 3: Oxford Mathematics 3rd Yr Lecture
+
+**Link:** <https://www.youtube.com/watch?v=9KknYY33alA>
+
+### Key Notes
+1.  Fano's inequality
+
+Y as estimate of X
+
+x,y discrete RVs then
+H(x|Y) < H(1_x≠y) + P(x≠y)log(|x|-1)
+If there is entropy betwen then it gives lower bound on how accurate an extimation of x based on Y is 
+
+2. Codes
+We have an input alphabet X
+we want to store it as a message in terms of of an alphabet y usually y= {0,1}
+
+Defintion for a finite set X denote X* the set of finite sequnces (e.g strings) in X
+
+for x= x_1x_2.. from X* concatenated we say |x| =n is the size od the string
+
+for two finite sets X,Y we call a fucntion c from X to Y* a symbol code (fixed to variable length) eg i take one input and map it to a string of some length and call c(x) in Y* the code word of x in X
+
+Y is said to be the d-ary if |Y| = d
+
+3. example X = {1,2..,6} and let c(x) be the binary expansion eg 1,10 ... etc 
+
+Problem is that this does not allow us to recover the original sequence eg 110 could be 6 or could be 1,2
+
+4. Let c from x to Y* be a symbol code 
+we denote c* be the extension of c to x* by concenation
+
+c*(x_1,x_2...x_n)= c(x_1)c(x_2)..c(x_n) 
+all concatenated together
+
+5. we say c is:
+1. is unambiguous if c is injective
+2. uniquely decodable if c* is injective eg every sequence of charcters maps to a different sequnce in Y
+3. Prefix code if no code word c(x) is a prefix of another code word i.e for x_1 and x_2 there is no c(x_1)y =c(x_2) eg no 110 and 11
+
+These are useful as if you go left to right and find something that is a code word you can stop because we know that isnt a prefix of a larger sequence
+
+6. Kraft McMillan Theorem
+1. Let c from X to Y* and write l_x be    |c(x)|
+then the sum of all |y|^-l_x is less than 1 for all x possible
+
+e.g $$\sum_{x \in \mathcal{X}} |y|^{-l_x} \leq 1$$
+
+2. Given l_x and Y satisfying , there exists a prefix code from X to Y* with   |c(x)| = l_x  for all x
+
+Eg for any uniquely decodable code there is a prefix code WITH the same lengths so uniquely decodable are useless
+
+### Citation
+
+Information Theory, Lecture 3: Oxford Mathematics 3rd Yr Lecture
+
+
+## Lecture: Information Theory, Lecture 4: Oxford Mathematics 3rd Yr Lecture
+
+**Link:** <https://www.youtube.com/watch?v=xeNVrE2t3M4>
+
+### Key Notes
+1. Asymptotic Equipartition property
+Example:
+X is a bernoulli {0,1} RV 
+X_1,...X_n copies (e.g copies of coin throws)
+A sequnce of observations (x_1,..x_n)
+probabiltuty of seuqnce is p^number of 1s *(1-p)^number of zeroes
+
+By law of large numbers if probabiltuty is p after alot of theows freuqncy of 0s/total is ~ p
+
+Statemnt:
+let X be discrete RV with X_1,..X_n copies
+then 1/n log P_(x...x_n)(x_1,...X_n) converges to H(x)
+
+eg probabiltyt of seunece log and 1/ converges to entropy as n goes to infnity 
+
+2. For any natural number n
+
+Typical seunwce length n with error epsilon which is 
+T^ε_n = {(x_1,...,x_n) belonging to X^n such that -1/n log  P_(x...x_n)(x_1,...X_n) is within epsilon of the entropy of X, H(x)}
+
+3. Theorem Shannon
+for all epsilon greater than 0 
+there exists n_0 natiral number such that for all n greater than n>0
+
+
+
+$$\forall \, \varepsilon > 0,\ \exists \, n_0 \in \mathbb{N} \text{ such that for all } n \ge n_0:$$
+
+$$1)\quad
+P_{X_1,\ldots,X_n}(x_1,\ldots,x_n)
+\in \left[ 2^{-n(H(X)+\varepsilon)},\ 2^{-n(H(X)-\varepsilon)} \right],
+\quad \forall (x_1,\ldots,x_n) \in \mathcal{T}_n^{\varepsilon}.$$
+
+$$2)\quad
+\mathbb{P}\big( (X_1,\ldots,X_n) \in \mathcal{T}_n^{\varepsilon} \big)
+\ge 1 - \varepsilon.$$
+
+when n is very large the sequence is drawn uniformly from a smaller set
+
+Most liekly outcome each time eg 60% heads 40% tails is HHHH but that isnt typical sequnce
+
+
+4. Desnote s^ε_n is smallest susbet of X^n such that the probability that all the oucomes are in s^ε_n is gtreater than 1-ε
+
+
+
+
+### Citation
+
+Information Theory, Lecture 4: Oxford Mathematics 3rd Yr Lecture
