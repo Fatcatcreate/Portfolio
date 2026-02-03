@@ -653,7 +653,7 @@ all concatenated together
 
 These are useful as if you go left to right and find something that is a code word you can stop because we know that isnt a prefix of a larger sequence
 
-6. Kraft McMillan Theorem
+6. Kraft McMillan Theorem IF THIS HOLDS THEN WE HVE PREFIX CODE
 1. Let c from X to Y* and write l_x be    |c(x)|
 then the sum of all |y|^-l_x is less than 1 for all x possible
 
@@ -717,9 +717,57 @@ Most liekly outcome each time eg 60% heads 40% tails is HHHH but that isnt typic
 
 4. Desnote s^ε_n is smallest susbet of X^n such that the probability that all the oucomes are in s^ε_n is gtreater than 1-ε
 
+### Citation
 
+Information Theory, Lecture 4: Oxford Mathematics 3rd Yr Lecture
+
+
+## Lecture: Information Theory, Lecture 5: Oxford Mathematics 3rd Yr Lecture
+
+**Link:** <https://www.youtube.com/watch?v=CBC1ngWVrHE>
+
+### Key Notes
+1.  Optimal codes:
+We call a symbol code c optimal maps symbols in X to strings in y* optimal for a random varibale X, if it minimises the expected length of the code word of X, we want small output
+
+among all uniquely decodabke codes.
+
+2. From Kraft Macmillan a code is optimal if it solves the constrained minimisation problem with codeword lengtjs c(x) =l_x minkmise sum for all x probability of x and the length of the code word for x, eg 50% chnace of code word 4 and 50% chnace of codeword 2 gives 3 
+
+minimum if l_x is -log(p(x))
+eg average codeword length being entropy 
+
+3. Source coding theorem
+Let X be a RV taking values in X and c a Uniquely Decodable  d-ary source code
+
+H_d(x)< E[len(c(x))]
+
+Equality is length c(x)  and -log_d(p(x)) is an integer
+
+4. Let X be as above 
+the exists an optimal code c** which is prefix for which entropy is less than Expected code word lemnght but entropy + 1 is greater than it exists
+
+H_d(x)<E[len(c**(x))] <H_d(x)+1
+
+5. Block code 
+
+COnsider (x_1,...,X_n) random avriable basically a biucnh fo indentiacal copies 
+then we have a bound as above
+
+n*H(x)<E[len(c(x_1,...,x_n))]< n H(x)+1
+
+divind by N we can get closer to the lower bound and we can get closer
+
+H(x) <1/n E[len(c(x_1,...,x_n))]< H(x)+1/n
+
+For a block code we can get close to optimal 
+
+6. Probelms:
+Must list all code words in a length n block. lemgth 100 and input 26 code words then 26^100 codewords to sort and deal with 
+
+We need lenght of input divisble by length of block therefore we use padding 
 
 
 ### Citation
 
-Information Theory, Lecture 4: Oxford Mathematics 3rd Yr Lecture
+Information Theory, Lecture 5: Oxford Mathematics 3rd Yr Lecture
